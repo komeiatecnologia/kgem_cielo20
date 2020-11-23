@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files         = Dir["{lib/**/*.rb,*.gemspec,README,Gemfile,lib/**/*.pem}"]
   s.require_paths = ["lib"]
 
-  s.add_dependency "kgem_log"
+  # s.add_dependency "kgem_log"
   s.add_dependency 'json_pure', '~> 1.6', '<= 1.6.4'
   s.add_dependency 'rake', '>= 0.8.7'
 
