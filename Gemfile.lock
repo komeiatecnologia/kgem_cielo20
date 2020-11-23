@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/komeiatecnologia/kgem_log20.git
+  revision: 39d28ec0c4dd2ec01c8bc5fa95157cd32a401ae5
+  specs:
+    kgem_log (0.1.2)
+
+GIT
   remote: git://github.com/komeiatecnologia/logger.git
   revision: dd0d0ecde16f9ce4c45f5b805672ae492f25943e
   specs:
@@ -11,8 +17,6 @@ GEM
     awesome_print (0.4.0)
     coderay (1.1.2)
     json_pure (1.6.4)
-    kgem_log (0.1.0)
-      logger
     method_source (0.9.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -27,7 +31,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print (= 0.4.0)
   json_pure (<= 1.6.4)
-  kgem_log (>= 0.0.1)
+  kgem_log!
   logger!
   pry (= 0.9.12.6)
   rake (>= 0.8.7)
