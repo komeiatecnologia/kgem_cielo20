@@ -1,13 +1,18 @@
+GIT
+  remote: git://github.com/komeiatecnologia/logger.git
+  revision: dd0d0ecde16f9ce4c45f5b805672ae492f25943e
+  specs:
+    logger (1.3.1)
+
 GEM
   remote: https://rubygems.org/
-  remote: http://komeia:ikomeia2014@gems.komeia.com.br/
+  remote: http://komeia:ikomeia2014@gems.komeia.com/
   specs:
     awesome_print (0.4.0)
     coderay (1.1.2)
     json_pure (1.6.4)
     kgem_log (0.1.0)
       logger
-    logger (1.2.8)
     method_source (0.9.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -23,8 +28,9 @@ DEPENDENCIES
   awesome_print (= 0.4.0)
   json_pure (<= 1.6.4)
   kgem_log (>= 0.0.1)
+  logger!
   pry (= 0.9.12.6)
-  rake (= 0.8.7)
+  rake (>= 0.8.7)
 
 BUNDLED WITH
    1.16.1
