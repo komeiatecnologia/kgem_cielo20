@@ -1,0 +1,30 @@
+GEM
+  remote: https://rubygems.org/
+  remote: http://komeia:ikomeia2014@gems.komeia.com.br/
+  specs:
+    awesome_print (0.4.0)
+    coderay (1.1.2)
+    json_pure (1.6.4)
+    kgem_log (0.1.0)
+      logger
+    logger (1.2.8)
+    method_source (0.9.0)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rake (0.8.7)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print (= 0.4.0)
+  json_pure (<= 1.6.4)
+  kgem_log (>= 0.0.1)
+  pry (= 0.9.12.6)
+  rake (= 0.8.7)
+
+BUNDLED WITH
+   1.16.1
