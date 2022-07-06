@@ -72,7 +72,8 @@ module KCielo
       def new_https(uri)
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
-        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+        # http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
         http.ca_file = KCielo.ca_file_path if cert_exist?
         http.read_timeout = KCielo.timeout
         http
