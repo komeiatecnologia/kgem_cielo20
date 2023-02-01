@@ -2,7 +2,7 @@ module KCielo
   module Payment
     class CompletePaymentSlip < KCielo::Request::CompletePaymentSlip
       def pay
-        send_request if valid_?
+        send_request
       end
 
       private

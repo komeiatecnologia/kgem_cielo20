@@ -3,7 +3,7 @@ module KCielo
     class SimplifiedCreditCard < KCielo::Request::SimplifiedCreditCard
 
       def pay
-        send_request if valid_?
+        send_request
       end
 
       private
