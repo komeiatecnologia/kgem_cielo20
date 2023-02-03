@@ -48,8 +48,9 @@ module KCielo
 
         private
         def self.body_parse(body)
-          parsed = eval_body_parser body
-          parsed = json_body_parser body if parsed.nil?
+          # parsed = eval_body_parser body
+          # parsed = json_body_parser body if parsed.nil?
+          parsed = json_body_parser body
           parsed
         end
 
