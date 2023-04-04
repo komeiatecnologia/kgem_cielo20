@@ -160,6 +160,10 @@ module KCielo
       '91' => 'Banco fora do ar',
       '96' => 'Tente novamente',
       '99' => 'Time out',
+      'GF' => 'Transação negada, entre em contato com a Cielo',
+      'GD' => 'Transação negada, entre em contato com a Cielo',
+      'GT' => 'Transação negada, entre em contato com a Cielo',
+      'GK' => 'Transação negada, entre em contato com a Cielo',
       'KE' => 'Transação não autorizada'
     }
 
