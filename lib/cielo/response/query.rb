@@ -5,14 +5,16 @@ module KCielo
       PATTERNS = {
         :payment_slip => /"Type"(| ):(| )"Boleto"/,
         :credit_card => /"Type"(| ):(| )"CreditCard"/,
-        :debit_card => /"Type"(| ):(| )"DebitCard"/
+        :debit_card => /"Type"(| ):(| )"DebitCard"/,
+        :pix => /"Type"(| ):(| )"Pix"/
       }
 
       BUILDERS = {
         :error => KCielo::Response::Default::Response,
         :credit_card => KCielo::Response::SimplifiedCreditCard,
         :debit_card => KCielo::Response::SimplifiedDebitCard,
-        :payment_slip => KCielo::Response::CompletePaymentSlip
+        :payment_slip => KCielo::Response::CompletePaymentSlip,
+        :pix => KCielo::Response::Pix
       }
 
       def self.build_response(response)
