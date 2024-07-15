@@ -12,7 +12,7 @@ module KCielo
           @qr_code_string = hash['QrCodeString']
           @qrcode_base64_image = hash['QrcodeBase64Image']
           @payment_id = hash['PaymentId']
-          @acquirer_transaction_id = hash['AcquirerTransactionId']
+          @tid = hash['AcquirerTransactionId']
           @proof_of_sale = hash['ProofOfSale']
           @status = hash['Status']
           @return_code = hash['ReturnCode']

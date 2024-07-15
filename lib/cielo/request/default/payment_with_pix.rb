@@ -1,7 +1,7 @@
 module KCielo
   module Request
     module Default
-      class Pix < KCielo::Request::Default::Payment
+      class PaymentWithPix < KCielo::Request::Default::Payment
         def initialize
           super
           send(:type=, :pix)
