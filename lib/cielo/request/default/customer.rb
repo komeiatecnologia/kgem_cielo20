@@ -54,6 +54,14 @@ module KCielo
           }
         end
 
+        def to_pix_hash
+          {
+            "Name" => @name,
+            'Identity' => @identity,
+            'IdentityType' => @identity_type
+          }
+        end
+
         private
         def valid_name?(name)
           valid_class_type_?(:name, name, String) && present_?(name, "name")

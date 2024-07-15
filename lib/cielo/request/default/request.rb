@@ -34,6 +34,14 @@ module KCielo
           }
         end
 
+        def to_pix_hash
+          {
+            "MerchantOrderId" => @merchant_order_id,
+            "Customer" => @customer.to_pix_hash,
+            "Payment" => @payment.to_pix_hash
+          }
+        end
+
         def valid_?
           present_?(@merchant_order_id, "merchant_order_id")
           present_?(@customer, "customer")

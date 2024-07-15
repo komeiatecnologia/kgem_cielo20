@@ -30,6 +30,13 @@ module KCielo
           }
         end
 
+        def to_pix_hash
+          {
+            "Type" => @type,
+            "Amount" => @amount
+          }
+        end
+
         private
         def valid_type?(type)
           valid_class_type_?(:type, type, Symbol) && parameter_exists_?(type, KCielo.payment_types)

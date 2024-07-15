@@ -27,6 +27,7 @@ require 'cielo/request/default/payment_with_debit_card'
 require 'cielo/request/default/payment_with_credit_card'
 require 'cielo/request/default/payment_with_payment_slip'
 require 'cielo/request/default/payment_with_complete_payment_slip'
+require 'cielo/request/default/payment_with_pix'
 
 require 'cielo/response/default/response'
 require 'cielo/response/default/errors'
@@ -40,17 +41,20 @@ require 'cielo/response/default/address'
 require 'cielo/response/default/payment_with_credit_card'
 require 'cielo/response/default/payment_with_debit_card'
 require 'cielo/response/default/payment_with_payment_slip'
+require 'cielo/response/default/payment_with_pix'
 
 require 'cielo/response/cancel'
 require 'cielo/response/complete_payment_slip'
 require 'cielo/response/simplified_credit_card'
 require 'cielo/response/simplified_debit_card'
+require 'cielo/response/pix'
 require 'cielo/response/query'
 
 require 'cielo/request/cancel'
 require 'cielo/request/complete_payment_slip'
 require 'cielo/request/simplified_credit_card'
 require 'cielo/request/simplified_debit_card'
+require 'cielo/request/pix'
 require 'cielo/request/query'
 
 require 'cielo/webservice/cancel'
@@ -58,12 +62,14 @@ require 'cielo/webservice/complete_payment_slip'
 require 'cielo/webservice/rest_client'
 require 'cielo/webservice/simplified_credit_card'
 require 'cielo/webservice/simplified_debit_card'
+require 'cielo/webservice/pix'
 require 'cielo/webservice/query'
 
 require 'cielo/payment/cancel'
 require 'cielo/payment/complete_payment_slip'
 require 'cielo/payment/simplified_credit_card'
 require 'cielo/payment/simplified_debit_card'
+require 'cielo/payment/pix'
 require 'cielo/payment/query'
 
 module KCielo
@@ -78,6 +84,8 @@ module KCielo
   CompletePaymentSlip = Payment::CompletePaymentSlip
   CPS = CompletePaymentSlip
 
+  Pix = Payment::Pix
+
   Cancel = Payment::Cancel
   C = Cancel
 
@@ -88,10 +96,16 @@ module KCielo
   define_setting :ca_file_path, "#{File.dirname(__FILE__)}/cielo.pem"
 
   ## PAYMENT METHODS AVAILABLE
+  # define_setting :payment_types, {
+  #                                 :credit_card => "CreditCard",
+  #                                 :debit_card => "DebitCard",
+  #                                 :eletronic_transfer => "EletronicTransfer",
+  #                                 :payment_slip => "Boleto"
+  #                                }
   define_setting :payment_types, {
                                   :credit_card => "CreditCard",
                                   :debit_card => "DebitCard",
-                                  # :eletronic_transfer => "EletronicTransfer",
+                                  :pix => "Pix",
                                   :payment_slip => "Boleto"
                                  }
 
@@ -173,6 +187,7 @@ module KCielo
   define_setting :complete_payment_slip_resource, "/1/sales/"
   define_setting :simplified_credit_card_resource, "/1/sales/"
   define_setting :simplified_debit_card_resource, "/1/sales/"
+  define_setting :pix_resource, "/1/sales/"
   define_setting :cancel_resource, "/1/sales/"
   define_setting :query_resource, "/1/sales/"
 
