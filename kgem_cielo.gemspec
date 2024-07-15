@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = "kgem_cielo"
-  s.version       = "1.4.0"
+  s.version       = "1.5.0"
   s.description   = "Cielo API REST que funciona no ruby 1.9.3 e atende as necessidades especiais da Komeia"
   s.summary       = "API Pagamentos"
   s.author        = "Komeia"
